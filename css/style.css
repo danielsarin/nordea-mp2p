@@ -1,0 +1,29 @@
+#nordea-logo {
+  margin-top: 10px;
+}
+
+.cl-btn-group {
+  margin-top: 10px;
+}
+
+.btn-big {
+  margin: 10px;
+}
+
+p.small {
+  font-size: 11px;
+  font-style: italic;
+}
+
+.balance-text {
+  font-size: 16px;
+}
+
+.balance {
+  float: right;
+  font-size: 18px;
+}
+
+.footer-text {
+  text-align: center;
+}
