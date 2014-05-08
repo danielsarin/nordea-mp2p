@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="css/style.css">
   
   <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="js/jquery.extendedinput.min.js"></script>
   <script src="clank-master/js/clank/ratchet/fingerblast.js"></script>
   <script src="clank-master/js/clank/ratchet/sliders.js"></script>
   <script src="clank-master/js/clank/ratchet/toggles.js"></script>
@@ -106,13 +107,25 @@
             </div>
             
             <div class="cl-article cl-article-centered">
-              <a href="confirmpayment.html" class="cl-btn align-center btn-big payment-button">Continue</a>
+              <a href="#" data-toggle-element="popover-context" class="cl-btn align-center btn-big payment-button">Continue</a>
             </div>
+            
           </div>
           <div class="cl-bar-footer">
             <!-- Footer content here -->
           </div>
         </div>
+        
+        <div id="popover-context" class="hide" data-element-to-be-toggled="popover-context" data-element-to-be-closed="popover-context">
+          <div class="cl-popover align-right pop-from-header">
+            <div class="cl-article padded">
+              <p>This is a popover!</p>
+              <a href="#" class="cl-btn" data-close-element="popover-context">Close</a>
+            </div>
+          </div>
+          <div class="cl-modal-backdrop"></div>
+        </div>
+        
       </div>
     </div>
   </div>

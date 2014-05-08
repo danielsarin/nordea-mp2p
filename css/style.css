@@ -1,5 +1,7 @@
-#nordea-logo {
+#swish-logo {
+  height: 25px;
   margin-top: 10px;
+  vertical-align: top;
 }
 
 .cl-btn-group {
@@ -15,6 +17,51 @@ p.small {
   font-style: italic;
 }
 
+
+/*------------------ sidemenu ------------------*/
+
+.menu-button {
+  color: #fff;
+  cursor: pointer;
+  left: 12px;
+  position: absolute;
+  top: 12px;
+}
+
+.side-menu {
+  background-color: #045;
+  color: #fff;
+  height: 590px;
+  left: -250px;
+  position: absolute;
+  width: 250px;
+  z-index: 20000;
+}
+
+.side-menu h4 {
+  margin-left: 20px;
+}
+
+.side-menu ul {
+  margin: 0;
+  padding: 0 10px;
+}
+
+.side-menu li {
+  border-bottom: 1px solid #034;
+  list-style-type: none;
+  padding: 12px;
+}
+
+.side-menu li:last-child {
+  border-bottom: 0;
+}
+
+/*-- end of sidemenu --*/
+
+
+/*------------------ main.html ------------------*/
+
 .balance-text {
   font-size: 16px;
 }
@@ -24,9 +71,125 @@ p.small {
   font-size: 18px;
 }
 
+
+.recipient.padded {
+  font-size: 16px;
+  margin: 50px 10px 0;
+  padding: 0 10px;
+  position: relative;
+}
+
+.recipient input[type="text"] {
+  margin: 10px 0; 
+}
+
+.select-recipient {
+  background-color: #fff;
+  position: absolute;
+  top: 62px;
+  width: 312px;
+  z-index: 10000;
+}
+
+.select-recipient ul {
+  margin: 0;
+  padding: 0; 
+}
+
+.select-recipient li {
+  background-color: #555;
+  border-radius: 2px;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  list-style-type: none;
+  margin: 2px;
+  padding: 5px 40px;
+  position: relative;
+}
+
+.select-recipient i.user {
+  left: 5px;
+  position: absolute;
+}
+
+.select-recipient .number {
+  font-size: 12px;
+}
+
+.select-recipient i.delete {
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 15px;
+}
+
+.amount.padded {
+  font-size: 16px;
+  margin: 10px 10px 0;
+  padding: 0 10px;
+  position: relative;
+}
+
+.amount input[type="text"] {
+  margin: 10px 0;
+}
+
+.amount .euro {
+  font-size: 20px;
+  position: absolute;
+  right: 20px;
+  top: 35px;
+}
+
+.payment-button {
+  margin: 10px 20px;
+}
+
+/*-- end of main.html --*/
+
+
+
+
+/*------------------ receipt.html ------------------*/
+
+.receipt-container {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.receipt {
+  background-color: #fff;
+  margin: 0 30px;
+  padding: 10px;
+  position: absolute;
+  top: -200px;
+  width: 290px;
+}
+
+.receipt .check {
+  text-align: center; 
+}
+
+.receipt .check i {
+  color: green;
+}
+
+/*-- end of receipt.html --*/
+
+
+
 .footer-text {
   text-align: center;
 }
+
+
+
+
+
+
 
 #phoneNumber .phoneInput {
   width: 292px;
