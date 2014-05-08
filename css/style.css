@@ -117,6 +117,13 @@ p.small {
   font-size: 12px;
 }
 
+.select-recipient img {
+  height: 25px;
+  position: absolute;
+  right: 50px;
+  top: 10px;
+}
+
 .select-recipient i.delete {
   cursor: pointer;
   display: none;
