@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="clank-master/css/clank.css" media="screen">
   <link rel="stylesheet" href="css/style.css">
   
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src="clank-master/js/clank/ratchet/fingerblast.js"></script>
   <script src="clank-master/js/clank/ratchet/sliders.js"></script>
   <script src="clank-master/js/clank/ratchet/toggles.js"></script>
@@ -44,10 +45,38 @@
           <div class="cl-content">
             <!-- Content here -->
             <div class="cl-article cl-article-centered">
-              <p class="intro">Choose bank to login</p>
-              <p>Todo</p>
-              <a href="pincode.html" class="cl-btn align-center btn-big">Continue</a>
-              <a href="confirmation.html" class="cl-btn cl-btn-subtle align-center btn-big">Cancel</a>
+              <p class="intro">Connect your bank</p>
+              
+              <div class="cl-form padded">
+              
+              
+              
+
+			  <div class="radio-list radio-list-multirow">
+			  	<div class="top-radio-list">
+		        <label for="demo-radios-1" class=""><input type="radio" id="demo-radios-1" name="demo-radios"> Nordea</label>
+		        <label for="demo-radios-2" class=""><input type="radio" id="demo-radios-2" name="demo-radios"> Osuuspankki</label>
+		        <label for="demo-radios-3" class=""><input type="radio" id="demo-radios-3" name="demo-radios"> Aktia</label>
+		    	</div>
+		     	<div class="bottom-radio-list">
+		        <label for="demo-radios-4" class=""><input type="radio" id="demo-radios-4" name="demo-radios"> S-Pankki</label>
+		        <label for="demo-radios-5" class=""><input type="radio" id="demo-radios-5" name="demo-radios"> Danske Bank</label>
+		        <label for="demo-radios-6" class=""><input type="radio" id="demo-radios-6" name="demo-radios"> Handelsbank</label>
+		      	</div>
+		      </div>
+		      <div class="login-credentials">
+		      	<!-- <p style="line-height: 20px; vertical-align: middle;"><img src="img/osuus-small.png" style=" vertical-align: middle; width: 30px;"> Log in</p> -->
+		        <input type="password" placeholder="username">
+		        <input type="password" placeholder="password">
+                <a id="btn-continue" class="cl-btn align-center">Continue</a>
+		      </div>
+		      <div class="otp-credentials">
+		      	<p>Please enter one time pin <strong>B02</strong>.</p>
+		        <input type="password" placeholder="one time pincode">
+                <a href="bank-success.html" id="btn-login" class="cl-btn align-center">Log in</a>
+		      </div>
+		      </div>
+              <a href="confirmation.html" class="cl-btn cl-btn-subtle align-center btn-big" style="margin-top: 3em;">Cancel</a>
             </div>
           </div>
           <div class="cl-bar-footer">
@@ -60,5 +89,27 @@
   </div>
   
 </body>  
+<style>
+	.login-credentials,
+	.otp-credentials {
+		display: none;
+	}
+</style>
+<script type="text/javascript">
+$(function() {
+	$('.radio-list input[type="radio"]').change(function() {
+		$('#btn-continue').removeClass('cl-btn-disabled');
+		$('.login-credentials, otp-credentials').slideUp(function() {
+			$('.login-credentials').slideDown();
+		});
+	});
+	
+	$('#btn-continue').click(function() {
+		$('.login-credentials').slideUp(function() {
+			$('.otp-credentials').slideDown();
+		});
+	});
+});
+</script>
 
 </html>

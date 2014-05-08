@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="clank-master/css/clank.css" media="screen">
   <link rel="stylesheet" href="css/style.css">
   
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src="clank-master/js/clank/ratchet/fingerblast.js"></script>
   <script src="clank-master/js/clank/ratchet/sliders.js"></script>
   <script src="clank-master/js/clank/ratchet/toggles.js"></script>
@@ -17,7 +18,7 @@
 
 <body>
 
-  <div class="cl-device-frame" id="phoneNumber">
+  <div class="cl-device-frame">
     <div class="cl-device-wrap" data-os="android" data-device="galaxynexus-portrait">
       <div class="cl-device-body">
         <div class="cl-android-status">
@@ -41,24 +42,39 @@
           <div class="cl-bar-title">
             <h1 class="cl-title"><img id="nordea-logo" src="img/nordea.png"></h1>
           </div>
-          <div class="cl-content">
+          <div class="cl-content" style="overflow: scroll;" id="loading">
+			    <div class="cl-loading-wrapper">
+			  <div class="cl-loading">
+			    <div class="cl-loading-1"></div>
+			    <div class="cl-loading-2"></div>
+			    <div class="cl-loading-3"></div>
+			    <div class="cl-loading-4"></div>
+			    <div class="cl-loading-5"></div>
+			    <div class="cl-loading-6"></div>
+			    <div class="cl-loading-7"></div>
+			    <div class="cl-loading-8"></div>
+			  </div>
+			</div>
+		  </div>
+          <div class="cl-content" id="success">
             <!-- Content here -->
             <div class="cl-article cl-article-centered">
-              <p class="intro">Confirm your phone number</p>
-              <p>Please confirm that this is your phone number. If not, then correct
-                the number.</p>
-              <div class="cl-form padded">
-                +358 <input type="tel" value="40 1234567" class="phoneInput">
-              </div>
-              <p>Next I'll send a confirmation code for you with SMS. We are not using
-                your number to advertise.</p>
-              <a href="confirmation.html" class="cl-btn align-center btn-big">Continue</a>
-              <a href="terms.html" class="cl-btn cl-btn-subtle align-center btn-big">Cancel</a>
+              <p class="intro">Connected to Osuuspankki!</p>
+              
+              <img src="img/osuus.png" style="float: right; width: 110px; margin: 20px 0 10px 20px;">
+              
+              <p>We connected the app to your Osuuspankki account.</p>
+              
+              <p>You will pay and receive money with this app through your primary account.</p>
+              
+              <p>You can disconnect your account at any time in the settings menu.</p>
+              <a href="pincode.html" class="cl-btn align-center btn-big">Continue</a>
+              <a href="confirmation.html" class="cl-btn cl-btn-subtle align-center btn-big">Cancel</a>
             </div>
           </div>
           <div class="cl-bar-footer">
             <!-- Footer content here -->
-            <h3 class="footer-text">Registration 3/X</h3>
+            <h3 class="footer-text">Registration 5/X</h3>
           </div>
         </div>
       </div>
@@ -66,5 +82,19 @@
   </div>
   
 </body>  
+<style>
+	#success {
+		display: none;
+	}
+	
+</style>
+<script type="text/javascript">
+$(function() {
+	setTimeout(function() {
+		$('#loading').hide();
+		$('#success').show();
+	}, 1500);
+});
+</script>
 
 </html>
