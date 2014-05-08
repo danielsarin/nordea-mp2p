@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="clank-master/css/clank.css" media="screen">
   <link rel="stylesheet" href="css/style.css">
   
-  
   <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src="clank-master/js/clank/ratchet/fingerblast.js"></script>
   <script src="clank-master/js/clank/ratchet/sliders.js"></script>
@@ -63,16 +62,24 @@
 		        <label for="demo-radios-6" class=""><input type="radio" id="demo-radios-6" name="demo-radios"> Handelsbank</label>
 		      	</div>
 		      </div>
+		      <div class="login-credentials">
+		      	<!-- <p style="line-height: 20px; vertical-align: middle;"><img src="img/osuus-small.png" style=" vertical-align: middle; width: 30px;"> Log in</p> -->
+		        <input type="password" placeholder="username">
+		        <input type="password" placeholder="password">
+                <a id="btn-continue" class="cl-btn align-center">Continue</a>
 		      </div>
-              <a href="bank-login.html" id="btn-login" class="cl-btn cl-btn-disabled align-center btn-big">Continue</a>
-              <a class="cancel cl-btn cl-btn-subtle align-center btn-big">Cancel</a>
+		      <div class="otp-credentials">
+		      	<p>Please enter one time pin <strong>B02</strong>.</p>
+		        <input type="password" placeholder="one time pincode">
+                <a href="bank-success.html" id="btn-login" class="cl-btn align-center">Log in</a>
+		      </div>
+		      </div>
+              <a class="cl-btn cl-btn-subtle align-center btn-big" style="margin-top: 3em;">Cancel</a>
             </div>
           </div>
           <div class="cl-bar-footer">
             <!-- Footer content here -->
-            <h3 class="footer-prev cl-btn">< Prev</h3>
-            <h3 class="footer-text">Registration 4/8</h3>
-            <h3 class="footer-next cl-btn cl-btn-disabled">Next ></h3>
+            <h3 class="footer-text">Registration 5/X</h3>
           </div>
 		<div class="cl-alert">
 	      <div class="cl-alert-box">
@@ -99,7 +106,7 @@
 <script type="text/javascript">
 $(function() {
 	$('.radio-list input[type="radio"]').change(function() {
-		$('#btn-login').removeClass('cl-btn-disabled');
+		$('#btn-continue').removeClass('cl-btn-disabled');
 		$('.login-credentials, otp-credentials').slideUp(function() {
 			$('.login-credentials').slideDown();
 		});

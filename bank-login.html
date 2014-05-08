@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="clank-master/css/clank.css" media="screen">
   <link rel="stylesheet" href="css/style.css">
   
-  
   <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src="clank-master/js/clank/ratchet/fingerblast.js"></script>
   <script src="clank-master/js/clank/ratchet/sliders.js"></script>
@@ -49,31 +48,26 @@
             <div class="cl-article cl-article-centered">
               <p class="intro">Connect your bank</p>
               
-              <div class="cl-form padded">     
-
-			  <div class="radio-list radio-list-multirow">
-			  	<div class="top-radio-list">
-		        <label for="demo-radios-1" class=""><input type="radio" id="demo-radios-1" name="demo-radios"> Nordea</label>
-		        <label for="demo-radios-2" class=""><input type="radio" id="demo-radios-2" name="demo-radios"> Osuuspankki</label>
-		        <label for="demo-radios-3" class=""><input type="radio" id="demo-radios-3" name="demo-radios"> Aktia</label>
-		    	</div>
-		     	<div class="bottom-radio-list">
-		        <label for="demo-radios-4" class=""><input type="radio" id="demo-radios-4" name="demo-radios"> S-Pankki</label>
-		        <label for="demo-radios-5" class=""><input type="radio" id="demo-radios-5" name="demo-radios"> Danske Bank</label>
-		        <label for="demo-radios-6" class=""><input type="radio" id="demo-radios-6" name="demo-radios"> Handelsbank</label>
-		      	</div>
+              <div class="cl-form padded">
+              
+              
+              	<img src="img/osuus-small.png" style="width: 30px; float: left; vertical-align: middle; margin-right: 5px;"> 
+			 	<h3 style="padding-top: 4px;">Osuuspankki</h3>
+		        <input type="password" placeholder="username">
+		        <input type="password" placeholder="password">	
 		      </div>
-		      </div>
-              <a href="bank-login.html" id="btn-login" class="cl-btn cl-btn-disabled align-center btn-big">Continue</a>
+              <a href="bank-onetime.html" class="cl-btn align-center btn-big">Continue</a>
               <a class="cancel cl-btn cl-btn-subtle align-center btn-big">Cancel</a>
             </div>
           </div>
           <div class="cl-bar-footer">
             <!-- Footer content here -->
             <h3 class="footer-prev cl-btn">< Prev</h3>
-            <h3 class="footer-text">Registration 4/8</h3>
+            <h3 class="footer-text">Registration 5/8</h3>
             <h3 class="footer-next cl-btn cl-btn-disabled">Next ></h3>
           </div>
+        </div>
+        
 		<div class="cl-alert">
 	      <div class="cl-alert-box">
 	        <h3 class="cl-alert-title">Cancel registration</h3>
@@ -84,33 +78,15 @@
 	        </div>
 	      </div>
 	    </div>
-        </div>
       </div>
     </div>
   </div>
   
 </body>  
 <style>
-	.login-credentials,
-	.otp-credentials {
+	.login-credentials {
 		display: none;
 	}
 </style>
-<script type="text/javascript">
-$(function() {
-	$('.radio-list input[type="radio"]').change(function() {
-		$('#btn-login').removeClass('cl-btn-disabled');
-		$('.login-credentials, otp-credentials').slideUp(function() {
-			$('.login-credentials').slideDown();
-		});
-	});
-	
-	$('#btn-continue').click(function() {
-		$('.login-credentials').slideUp(function() {
-			$('.otp-credentials').slideDown();
-		});
-	});
-});
-</script>
 
 </html>

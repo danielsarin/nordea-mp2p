@@ -27,3 +27,48 @@ p.small {
 .footer-text {
   text-align: center;
 }
+
+#phoneNumber .phoneInput {
+  width: 292px;
+}
+.status-notification {
+	line-height: 18px;
+}
+.cl-form .radio-list-multirow {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+.cl-form .radio-list-multirow div {
+	display: -webkit-flex;
+}
+.cl-form .radio-list-multirow .top-radio-list {
+	margin-bottom: 0;
+}
+.cl-form .radio-list-multirow .top-radio-list label {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	border-bottom: 0;
+}
+.cl-form .radio-list .bottom-radio-list label {
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+
+
+	.cl-bar-footer h3 {
+		float: left;
+		width: 60px;
+		height: 40px;
+		position: absolute;
+	}
+	.cl-bar-footer .footer-prev {
+		text-align: right;
+	}
+	.cl-bar-footer .footer-next {
+		
+	}
+	.cl-bar-footer .footer-text {
+		width: 100%;
+		text-align: center;
+	}
