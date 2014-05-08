@@ -15,6 +15,9 @@
 .cl-btn-group {
   margin-top: 10px;
 }
+.cl-btn-group {
+  margin-top: 10px;
+}
 
 .btn-big {
   margin: 10px;
@@ -25,6 +28,9 @@ p.small {
   font-style: italic;
 }
 
+.cl-article a.cl-btn-subtle:hover {
+	color: white;
+}
 
 /*------------------ sidemenu ------------------*/
 
@@ -82,7 +88,7 @@ p.small {
 
 .recipient.padded {
   font-size: 16px;
-  margin: 50px 10px 0;
+  margin: 30px 10px 0;
   padding: 0 10px;
   position: relative;
 }
@@ -265,6 +271,7 @@ ul.transactions li {
 
 
 
+/*------------------ Registration ----------------*/
 
 
 #phoneNumber .phoneInput {
@@ -311,3 +318,7 @@ ul.transactions li {
 		width: 100%;
 		text-align: center;
 	}
+	
+
+
+/*------------------ End of Registration ----------------*/

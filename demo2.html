@@ -15,6 +15,7 @@
   <script src="clank-master/js/clank/ratchet/sliders.js"></script>
   <script src="clank-master/js/clank/ratchet/toggles.js"></script>
   <script src="clank-master/js/clank/clank.js"></script>
+  <script src="js/script.js"></script>
 </head>
 
 <body>
@@ -38,31 +39,47 @@
           <span class="icon-android4-system-apps"></span>
           </span>
         </div>
+        
+        <div class="side-menu">
+          <h4>My account</h4>
+          <ul>
+            <li>Home</li>
+            <li>Transactions</li>
+            <li>Settings</li>
+            <li>Help</li>
+            <li>Log out</li>
+          </ul>
+        </div>
 
         <div class="cl-page">
           <div class="cl-bar-title">
+            <i class="fa fa-bars fa-2x menu-button"></i>
             <h1 class="cl-title">
               <img id="swish-logo" src="img/swish.png">
               <span id="swish-title">Swish</span>
               <span class="nordea-text">by</span>
               <img src="img/nordea.png" class="nordea-logo">
             </h1>
+            <a href="demo-transactions.html">
+            	<img src="img/transaction.png" style="width: 30px; position: absolute; top: 10px; right: 10px; opacity: 0.5;">
+          	</a>
           </div>
           <div class="cl-content">
             <!-- Content here -->
-            <div class="cl-article cl-article-centered">
+            <div class="cl-article cl-article-centered" style="padding: 5px 10px 0px 10px; ">
               <p>
                 <span class="balance-text">Your account balance:</span>
                 <span class="balance">27,45 €</span>
               </p>
             </div>
-            <div class="cl-form padded recipient">
-              <span style="font-size: 14px;">Recipient:</span>
-              <p>Matti Meikäläinen, 040 5555555</p>
+            <h3 style="margin: 0 20px;">Send payment</h3>
+			<div class="cl-form padded recipient" style="margin-top: 15px;">
+              <span style="font-size: 16px;"><i>Recipient:</i></span>
+              <p style="margin-top: 5px;">Matti Meikäläinen<br><small>040 5555555</small></p>
             </div>
             <div class="cl-form padded amount">
-              <span style="font-size: 14px;">Amount:</span>
-              <p>2,00 €</p>
+              <span style="font-size: 16px; font-style:italic;">Amount:</span>
+              <p style="margin-top: 5px;">2,00 €</p>
             </div>
             
             <div class="cl-article cl-article-centered">
@@ -78,8 +95,11 @@
         <div id="popover-context" class="hide" data-element-to-be-toggled="popover-context" data-element-to-be-closed="popover-context">
           <div class="cl-popover">
             <div class="cl-article padded">
-              <p>This is not possible in the demo.</p>
-              <a href="hello.html" class="cl-btn" data-close-element="popover-context">Go back to registration</a>
+              <p style="padding: 0 10px;">You're in the demo now. <br>
+              You need to be registered to make actual payments.</p>
+              
+              <a href="hello.html" class="cl-btn" data-close-element="popover-context">Go to registration!</a>
+              <a class="close-popover cl-btn cl-btn-subtle" data-close-element="popover-context">Continue demo</a>
             </div>
           </div>
           <div class="cl-modal-backdrop"></div>
@@ -96,6 +116,8 @@
     
     $(document).on('click', '.demo-button', function() {
       $('#popover-context').removeClass('hide');
+    }).on('click', '.close-popover', function() {
+    	$('#popover-context').addClass('hide');
     });
     
   });

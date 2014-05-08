@@ -15,6 +15,7 @@
   <script src="clank-master/js/clank/ratchet/sliders.js"></script>
   <script src="clank-master/js/clank/ratchet/toggles.js"></script>
   <script src="clank-master/js/clank/clank.js"></script>
+  <script src="js/script.js"></script>
 </head>
 
 <body>
@@ -60,6 +61,9 @@
               <span class="nordea-text">by</span>
               <img src="img/nordea.png" class="nordea-logo">
             </h1>
+            <a href="transactions.html">
+            	<img src="img/transaction.png" style="width: 30px; position: absolute; top: 10px; right: 10px; opacity: 0.5;">
+          	</a>
           </div>
           <div class="cl-content">
             <!-- Content here -->
@@ -133,17 +137,6 @@
       $('.select-recipient li').each(function() {
         $(this).hide();
       });
-    });
-    
-    $(document).on('click', '.menu-button', function() {
-      if ($('.cl-page').position().left == 0) {
-        $('.side-menu').animate({ 'left': '+=250px' }, 400);
-        $('.cl-page').animate({ 'left': '+=250px' }, 400);
-        $('.cl-page').one('click', function() {
-          $('.side-menu').animate({ 'left': '-=250px' }, 400);
-          $('.cl-page').animate({ 'left': '-=250px' }, 400);
-        });
-      } 
     });
     
   });

@@ -15,6 +15,7 @@
   <script src="clank-master/js/clank/ratchet/sliders.js"></script>
   <script src="clank-master/js/clank/ratchet/toggles.js"></script>
   <script src="clank-master/js/clank/clank.js"></script>
+  <script src="js/script.js"></script>
 </head>
 
 <body>
@@ -38,15 +39,30 @@
           <span class="icon-android4-system-apps"></span>
           </span>
         </div>
+        
+        <div class="side-menu">
+          <h4>My account</h4>
+          <ul>
+            <li>Home</li>
+            <li>Transactions</li>
+            <li>Settings</li>
+            <li>Help</li>
+            <li>Log out</li>
+          </ul>
+        </div>
 
         <div class="cl-page">
           <div class="cl-bar-title">
+            <i class="fa fa-bars fa-2x menu-button"></i>
             <h1 class="cl-title">
               <img id="swish-logo" src="img/swish.png">
               <span id="swish-title">Swish</span>
               <span class="nordea-text">by</span>
               <img src="img/nordea.png" class="nordea-logo">
             </h1>
+            <a href="transactions.html">
+            	<img src="img/transaction.png" style="width: 30px; position: absolute; top: 10px; right: 10px; opacity: 0.5;">
+          	</a>
           </div>
           <div class="cl-content">
             <!-- Content here -->
@@ -71,7 +87,8 @@
             </div>
             
             <div class="cl-article cl-article-centered">
-              <a href="main.html" class="cl-btn align-center btn-big payment-button">Continue</a>
+              <a href="main.html" class="cl-btn align-center btn-big payment-button">Back to home</a>
+              <a href="transactions.html" class="cl-btn cl-btn-subtle align-center btn-big payment-button">Go to transactions</a>
             </div>
           </div>
           <div class="cl-bar-footer">
