@@ -71,6 +71,10 @@ p.small {
   border-bottom: 0;
 }
 
+.side-menu a {
+  color: #fff;
+}
+
 /*-- end of sidemenu --*/
 
 
