@@ -1,7 +1,15 @@
 #swish-logo {
   height: 25px;
   margin-top: 10px;
-  vertical-align: top;
+  vertical-align: -5px;
+}
+
+.nordea-text {
+  font-size: 9px;
+}
+
+.nordea-logo {
+  height: 10px; 
 }
 
 .cl-btn-group {
@@ -97,7 +105,7 @@ p.small {
 }
 
 .select-recipient li {
-  background-color: #555;
+  background-color: #3ab;
   border-radius: 2px;
   color: #fff;
   cursor: pointer;
