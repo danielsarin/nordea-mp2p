@@ -67,57 +67,34 @@
           </div>
           <div class="cl-content">
             <!-- Content here -->
-            <div class="cl-article cl-article-centered" style="padding: 5px 10px 0px 10px; ">
-              <p>
-              	<img src="img/osuus-small.png" style="width: 22px; vertical-align: top;">
-                <span class="balance-text">Your account balance:</span>
-                <span class="balance">27,45 €</span>
-              </p>
+             <div class="cl-article cl-article-centered">
+              <p class="intro">Transactions</p>
+              <ul class="transactions">
+                <li class="new">
+                  <span class="date">10.5.2014</span>
+                  <span class="who">Olli Rauma</span>
+                  <span class="difference positive">2,00€</span>
+                  <div class="new-icon"><span class="text">new</span><span class="triangle"></span></div>
+                </li>
+                <li>
+                  <span class="date">9.5.2014</span>
+                  <span class="who">Mr. Davidson</span>
+                  <span class="difference positive">178,50€</span>
+                </li>
+                <li>
+                  <span class="date">9.5.2014</span>
+                  <span class="who">Olli Rauma</span>
+                  <span class="difference negative">-2,00€</span>
+                </li>
+                <li>
+                  <span class="date">8.5.2014</span>
+                  <span class="who">Matti Meikäläinen</span>
+                  <span class="difference negative">-50,00€</span>
+                </li>
+              </ul>
+              <a href="main.html" class="cl-btn align-center btn-big">Back to main page</a>
             </div>
-            <div class="cl-btn-group flex" style="padding: 0 20px; ">
-              <a class="cl-btn active">Send</a>
-              <a class="cl-btn">Request</a>
-              <a class="cl-btn">Divide bill</a>
-            </div>
-            <div class="cl-form padded recipient">
-              <span>Choose recipient</span>
-              <input type="text" placeholder="Enter name or phone number">
-              <div class="select-recipient">
-                <ul>
-                  <li>
-                    <i class="fa fa-user fa-2x user"></i>
-                    <span class="name">John Davidson</span>
-                    <br>
-                    <span class="number">050 1234567</span>
-                    <img src="img/swish.png">
-                    <i class="fa fa-times delete"></i>
-                  </li>
-                  <li>
-                    <i class="fa fa-user fa-2x user"></i>
-                    <span class="name">Matti Meikäläinen</span>
-                    <br>
-                    <span class="number">040 5555555</span>
-                    <i class="fa fa-times delete"></i>
-                  </li>
-                  <li>
-                    <i class="fa fa-user fa-2x user"></i>
-                    <span class="name">Olli Rauma</span>
-                    <br>
-                    <span class="number">050 1231231</span>
-                    <img src="img/swish.png">
-                    <i class="fa fa-times delete"></i>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="cl-form padded amount">
-              <span>Choose amount</span>
-              <input type="text" placeholder="0,00"> <span class="euro">€</span>
-            </div>
-            
-            <div class="cl-article cl-article-centered">
-              <a href="confirmpayment.html" class="cl-btn align-center btn-big payment-button">Continue</a>
-            </div>
+             
           </div>
           <div class="cl-bar-footer">
             <!-- Footer content here -->
@@ -166,10 +143,6 @@
       $('.select-recipient li').each(function() {
         $(this).hide();
       });
-    });
-    
-    $(document).on('click', '.cl-bar-footer', function() {
-    	location.href = 'main-receive.html';
     });
     
   });

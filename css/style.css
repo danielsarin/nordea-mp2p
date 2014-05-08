@@ -235,8 +235,41 @@ p.small {
 
 ul.transactions li {
   list-style-type: none;
-  margin: 5px;
+  padding: 5px;
+  margin: 5px 0;
 }
+ul.transactions li.new {
+  background: #b0ccff;
+  position: relative;
+  height: 50px;
+}
+ul.transactions li.new .new-icon {
+	position: absolute;
+	right: 0;
+	top: 0;
+	color: white;
+	z-index: 2;
+}
+ul.transactions li.new .new-icon .text {
+	position: absolute;
+	font-family: arial;
+	right: 5px;
+	top: 6px;
+	-webkit-transform:rotate(45deg);
+	z-index: 2;
+}
+ul.transactions li.new .new-icon .triangle {
+	position: absolute;
+	top: 0;
+	z-index: 0;
+	right: 0;
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 0 50px 50px 0;
+	border-color: transparent #134685 transparent transparent;
+}
+
 
 .transactions .date {
   display: inline-block;
