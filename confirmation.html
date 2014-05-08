@@ -9,10 +9,13 @@
   <link rel="stylesheet" href="clank-master/css/clank.css" media="screen">
   <link rel="stylesheet" href="css/style.css">
   
+  
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src="clank-master/js/clank/ratchet/fingerblast.js"></script>
   <script src="clank-master/js/clank/ratchet/sliders.js"></script>
   <script src="clank-master/js/clank/ratchet/toggles.js"></script>
   <script src="clank-master/js/clank/clank.js"></script>
+  <script src="js/script.js"></script>
 </head>
 
 <body>
@@ -51,13 +54,25 @@
                 <input type="text">
               </div>
               <a href="bank.html" class="cl-btn align-center btn-big">Continue</a>
-              <a href="phonenumber.html" class="cl-btn cl-btn-subtle align-center btn-big">Cancel</a>
+              <a class="cancel cl-btn cl-btn-subtle align-center btn-big">Cancel</a>
             </div>
           </div>
           <div class="cl-bar-footer">
             <!-- Footer content here -->
-            <h3 class="footer-text">Registration 4/X</h3>
+            <h3 class="footer-prev cl-btn">< Prev</h3>
+            <h3 class="footer-text">Registration 3/8</h3>
+            <h3 class="footer-next cl-btn cl-btn-disabled">Next ></h3>
           </div>
+		<div class="cl-alert">
+	      <div class="cl-alert-box">
+	        <h3 class="cl-alert-title">Cancel registration</h3>
+	        <p class="cl-alert-message">Are you sure you want to cancel registration? Any information you entered will be lost.</p>
+	        <div class="cl-alert-btn-group flex">
+	          <a class="cancel-continue cl-alert-btn" data-dismiss="cl-alert-btn">No</a>
+	          <a href="hello.html" class="cl-alert-btn" data-dismiss="cl-alert">Yes</a>
+	        </div>
+	      </div>
+	    </div>
         </div>
       </div>
     </div>

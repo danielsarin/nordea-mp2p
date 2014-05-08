@@ -54,3 +54,21 @@ p.small {
 	border-top-left-radius: 0;
 	border-top-right-radius: 0;
 }
+
+
+	.cl-bar-footer h3 {
+		float: left;
+		width: 60px;
+		height: 40px;
+		position: absolute;
+	}
+	.cl-bar-footer .footer-prev {
+		text-align: right;
+	}
+	.cl-bar-footer .footer-next {
+		
+	}
+	.cl-bar-footer .footer-text {
+		width: 100%;
+		text-align: center;
+	}
