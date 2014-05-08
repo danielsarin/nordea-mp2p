@@ -191,21 +191,60 @@ p.small {
 
 /*------------------ popover ----------------*/
 
-#popover-context .cl-popover {
+.cl-popover {
   left: 35px;
   top: 250px;
 }
 
-#popover-context .cl-popover:after {
+.cl-popover .cl-btn {
+  margin: 10px;
+}
+
+.cl-popover:after {
   display: none;
 }
 
-#popover-context .cl-modal-backdrop {
+.cl-modal-backdrop {
   opacity: 0.7;
 }
 
 /*-- end of popover --*/
 
+
+
+/*------------------ transactions.html ----------------*/
+
+
+ul.transactions li {
+  list-style-type: none;
+  margin: 5px;
+}
+
+.transactions .date {
+  display: inline-block;
+  width: 80px;
+}
+
+.transactions .who {
+  display: inline-block;
+  width: 160px;
+}
+
+.transactions .difference {
+  display: inline-block;
+  text-align: right;
+  width: 60px;
+}
+
+.transactions .negative {
+  color: red;
+}
+
+.transactions .positive {
+  color: green;
+}
+
+/*-- end of transactions.html --*/
 
 
 

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Nordea mobile P2P</title>
+  
+  <link rel="stylesheet" href="clank-master/css/clank.css" media="screen">
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="clank-master/js/clank/ratchet/fingerblast.js"></script>
+  <script src="clank-master/js/clank/ratchet/sliders.js"></script>
+  <script src="clank-master/js/clank/ratchet/toggles.js"></script>
+  <script src="clank-master/js/clank/clank.js"></script>
+</head>
+
+<body>
+
+  <div class="cl-device-frame">
+    <div class="cl-device-wrap" data-os="android" data-device="galaxynexus-portrait">
+      <div class="cl-device-body">
+        <div class="cl-android-status">
+          <span>
+          <span class="icon-android4-battery"></span>
+          <span class="icon-android4-network"></span>
+          <span class="icon-android4-wifi"></span>
+          <span>20:49</span>
+          </span>
+        </div>
+
+        <div class="cl-android-software-buttons">
+          <span>
+          <span class="icon-android4-system-back"></span>
+          <span class="icon-android4-system-home"></span>
+          <span class="icon-android4-system-apps"></span>
+          </span>
+        </div>
+        
+        
+        <div class="side-menu">
+          <h4>My account</h4>
+          <ul>
+            <li>Home</li>
+            <li>Transactions</li>
+            <li>Settings</li>
+            <li>Help</li>
+            <li>Log out</li>
+          </ul>
+        </div>
+
+        <div class="cl-page">
+          <div class="cl-bar-title">
+            <i class="fa fa-bars fa-2x menu-button"></i>
+            <h1 class="cl-title"><img id="swish-logo" src="img/swish.jpg"> <span id="swish-title">Swish</span></h1>
+          </div>
+          <div class="cl-content">
+            <!-- Content here -->
+             <div class="cl-article cl-article-centered">
+              <p class="intro">Transactions</p>
+              <ul class="transactions">
+                <li>
+                  <span class="date">9.5.2014</span>
+                  <span class="who">Mr. Davidson</span>
+                  <span class="difference positive">178,50€</span>
+                </li>
+                <li>
+                  <span class="date">9.5.2014</span>
+                  <span class="who">Olli Rauma</span>
+                  <span class="difference negative">-2,00€</span>
+                </li>
+                <li>
+                  <span class="date">8.5.2014</span>
+                  <span class="who">Matti Meikäläinen</span>
+                  <span class="difference negative">-50,00€</span>
+                </li>
+              </ul>
+              <a href="main.html" class="cl-btn align-center btn-big">Back to main page</a>
+            </div>
+             
+          </div>
+          <div class="cl-bar-footer">
+            <!-- Footer content here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <script>
+    
+  $(function() {
+    $('.recipient input').on('input', function() {
+      var text = $(this).val().toLowerCase();
+      
+      $('.select-recipient li').each(function() {
+        var name = $('.name', this).text().toLowerCase();
+        var number = $('.number', this).text();
+        if ((name.indexOf(text) > -1 || number.indexOf(text) > -1) && text.length > 0) {
+          $(this).show();
+        } else {
+          $(this).hide();
+        }
+      });
+    });
+    
+    $('.select-recipient li').on('click', function() {
+      $('.select-recipient').css('top', 20);
+      
+      $(this).css('cursor', 'default');
+      $('i.delete', this).show();
+      
+      $('.select-recipient li').not(this).each(function() {
+        $(this).hide();
+      });
+    });
+    
+    $(document).on('click', '.select-recipient i.delete', function() {
+      $('.recipient input').val('').focus();
+      $('.select-recipient').css('top', '');
+      
+      $(this).parent().css('cursor', 'pointer');
+      
+      $(this).hide();
+      $('.select-recipient li').each(function() {
+        $(this).hide();
+      });
+    });
+    
+    $(document).on('click', '.menu-button', function() {
+      if ($('.cl-page').position().left == 0) {
+        $('.side-menu').animate({ 'left': '+=250px' }, 400);
+        $('.cl-page').animate({ 'left': '+=250px' }, 400);
+        $('.cl-page').one('click', function() {
+          $('.side-menu').animate({ 'left': '-=250px' }, 400);
+          $('.cl-page').animate({ 'left': '-=250px' }, 400);
+        });
+      } 
+    });
+    
+  });
+    
+  </script>
+  
+</body>  
+
+</html>
