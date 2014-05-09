@@ -237,11 +237,13 @@ ul.transactions li {
   list-style-type: none;
   padding: 5px;
   margin: 5px 0;
+  height: 40px;
+  line-height: 30px;
 }
 ul.transactions li.new {
   background: #b0ccff;
   position: relative;
-  height: 50px;
+  height: 40px;
 }
 ul.transactions li.new .new-icon {
 	position: absolute;
@@ -253,8 +255,8 @@ ul.transactions li.new .new-icon {
 ul.transactions li.new .new-icon .text {
 	position: absolute;
 	font-family: arial;
-	right: 5px;
-	top: 6px;
+	right: 2px;
+	top: 0px;
 	-webkit-transform:rotate(45deg);
 	z-index: 2;
 }
@@ -266,7 +268,7 @@ ul.transactions li.new .new-icon .triangle {
 	width: 0px;
 	height: 0px;
 	border-style: solid;
-	border-width: 0 50px 50px 0;
+	border-width: 0 40px 40px 0;
 	border-color: transparent #134685 transparent transparent;
 }
 
@@ -278,13 +280,14 @@ ul.transactions li.new .new-icon .triangle {
 
 .transactions .who {
   display: inline-block;
-  width: 160px;
+  width: 140px;
 }
 
 .transactions .difference {
   display: inline-block;
   text-align: right;
   width: 60px;
+  margin-right: 20px;
 }
 
 .transactions .negative {
